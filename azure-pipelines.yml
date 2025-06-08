@@ -5,15 +5,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: JavaToolInstaller@0
-  inputs:
-    versionSpec: '11'
-    jdkArchitecture: 'x64'
-    jdkSourceOption: 'PreInstalled'
-
 - task: Maven@3
   inputs:
-    mavenPomFile: 'pom.xml'
-    goals: 'clean install'
-    publishJUnitResults: true
+    mavenPomFile: 'Javateam/pom.xml'   # 👈 update path here
+    goals: 'package'
+
 
